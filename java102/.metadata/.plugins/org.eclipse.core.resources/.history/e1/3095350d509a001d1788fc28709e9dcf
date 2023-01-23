@@ -1,0 +1,16 @@
+package maceraOyunu;
+
+public abstract class Location {
+	
+	private Player player;
+	private String name;
+	
+	public Location(Player player, String name) {
+		super();
+		this.player = player;
+		this.name = name;
+	}
+	
+	
+
+}

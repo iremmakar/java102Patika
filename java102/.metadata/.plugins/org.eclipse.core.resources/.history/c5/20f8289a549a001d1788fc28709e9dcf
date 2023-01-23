@@ -1,0 +1,21 @@
+package maceraOyunu;
+
+public class ToolStore extends NormalLoc{
+
+	public ToolStore(Player player) {
+		super(player, "Mağaza");
+		// TODO Auto-generated constructor stub
+	}
+	
+	public boolean onLocation() {
+		 System.out.println("Mağazaya hoşgeldiniz. ");
+		 System.out.println("Yapamak istediğiniz işlem");
+		 System.out.println("1 Silahlar");
+		 System.out.println("2 Zırhlar");
+		 System.out.println("3 Çıkış Yap");
+		 int selectedCase = Location.input.nextInt();
+		 return true;
+	}
+	
+
+}

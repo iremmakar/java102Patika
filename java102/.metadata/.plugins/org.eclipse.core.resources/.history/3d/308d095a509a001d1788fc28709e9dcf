@@ -1,0 +1,16 @@
+package maceraOyunu;
+
+public class NormalLoc extends Location{
+
+	public NormalLoc(Player player) {
+		super(player);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	boolean onLocation() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

@@ -1,0 +1,10 @@
+package maceraOyunu;
+
+public class SafeHouse extends NormalLoc{
+
+	public SafeHouse(Player player) {
+		super(player, "üvenli Ev");
+		// TODO Auto-generated constructor stub
+	}
+
+}

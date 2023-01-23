@@ -1,0 +1,72 @@
+package maceraOyunu;
+
+public class ToolStore extends NormalLoc{
+
+	public ToolStore(Player player) {
+		super(player, "Mağaza");
+		// TODO Auto-generated constructor stub
+	}
+	
+	public boolean onLocation() {
+		 System.out.println("Mağazaya hoşgeldiniz. ");
+		 System.out.println("Yapamak istediğiniz işlem");
+		 System.out.println("1 Silahlar");
+		 System.out.println("2 Zırhlar");
+		 System.out.println("3 Çıkış Yap");
+		 int selectedCase = Location.input.nextInt();
+		 while(selectedCase<1 || selectedCase>3) {
+			 System.out.println("Geçersiz değer");
+			 selectedCase=input.nextInt();
+		 }
+		 
+		 switch(selectedCase) {
+		 case 1:
+			 printWeapon();
+			 break;
+		 case 2:
+			 printArmor();
+			 break;
+		 case 3:
+			 System.out.println("Bir daha bekleriz");
+			 return true;
+			 
+		 
+		 }
+		 
+		 
+		 return true;
+	}
+	
+	public void printWeapon() {
+		System.out.println("Silahlar");
+		for(Weapon w : Weapon.weapons()) {
+			System.out.println(w.getName()+"Para : "+
+		w.getPrice()+
+		"Hasar : "+w.getDamage());
+		}
+		System.out.println("Bir silah seçiniz : ");
+		int selectedWeapon = input.nextInt();
+		 while(selectedWeapon<1 || selectedWeapon>Weapon.weapons().length) {
+			 System.out.println("Geçersiz değer");
+			 selectedWeapon=input.nextInt();
+		 }
+		 
+		 Weapon selectWeapon = Weapon.getWeaponObjById(selectedWeapon);
+		 if(selectWeapon!=null) {
+			 if(selectWeapon.getPrice()>this.getPlayer().getMoney()) {
+				 System.out.println("Yeterli paranız bulunmamaktadır.");
+				 
+			 }else {
+				System.out.println(selectWeapon.getName()+" silahını satın aldınız."); 
+			 }
+		 }
+		 
+		
+		
+	}
+	public void printArmor() {
+		System.out.println("Zırhlar");
+		
+	}
+
+}

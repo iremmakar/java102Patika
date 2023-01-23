@@ -1,0 +1,13 @@
+package maceraOyunu;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Samurai s = new Samurai();
+		Game game = new Game();
+		game.start();
+		s.getDamage()
+
+	}
+
+}

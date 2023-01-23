@@ -1,0 +1,13 @@
+package maceraOyunu;
+
+public class Forest extends BattleLoc{
+	
+	private int isOver;
+	
+	public Forest(Player player,int isOver) {
+		super(player, "Orman", new Vampire(), "firewood",3);
+		this.isOver=isOver;
+		// TODO Auto-generated constructor stub
+	}
+
+}

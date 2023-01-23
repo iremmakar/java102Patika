@@ -1,0 +1,11 @@
+package maceraOyunu;
+
+public class Mine extends BattleLoc{
+
+	public Mine() {
+		super(player, "Maden", new Snake(), award, 5);
+
+
+	}
+
+}

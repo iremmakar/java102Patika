@@ -1,0 +1,13 @@
+package maceraOyunu;
+
+public class Inventory {
+	
+	private Weapon weapon;
+	
+	public Inventory() {
+		this.weapon = new Weapon("yumruk",0,0,0);
+	}
+	
+	
+
+}
